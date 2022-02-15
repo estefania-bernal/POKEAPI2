@@ -1,0 +1,129 @@
+* {
+	box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background: #454755;
+    background: -webkit-linear-gradient(to right, #000000, #313131, #1eff00);
+    background: linear-gradient(to right, #000000, #292929, #1eff00);
+    background-size: 500%;
+    animation: fanimado 5s infinite;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+}
+
+@keyframes fanimado {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+    
+}
+
+
+h1 {
+    letter-spacing: 3px;
+    font-weight: bolder;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: oblique;
+}
+
+.poke-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.pokemon {
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 238, 0, 0.637);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.pokemon .img-container {
+    background-color: rgba(155, 50, 123, 0.521);
+    border-radius: 90%;
+    height: 120px;
+    width: 120px;
+}
+
+.pokemon .img-container img {
+    margin-top: 20px;
+    max-width: 90%;
+}
+
+.pokemon .info {
+    margin-top: 20px;
+}
+
+.pokemon .number {
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 5px 10px;
+    font-weight: bolder;
+    
+}
+
+.pokemon .name {
+    margin: 15px 0 7px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .card-container {
+    transform: rotateY(180deg);
+  }
+  
+  .pokemon-block,
+  .pokemon-block-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0%;
+  }
+  
+  .stat-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
